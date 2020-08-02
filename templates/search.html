@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Search Results for {{search_term}}
+{% endblock title %}
+{% block content %}
+<!-- Main Section -->
+    <div class="container">
+      <h3 class="heading font-weight-light" style="font-family:candara;font-size: 32px;"><b>Search results for "{{search_term}}"</b></h3>
+      <hr />
+    </div>
+
+    <div class="container main-part">
+      {% if fd %}
+    {% for i in fd %}
+    {% include 'partials/_card.html' %}
+  
+    {% endfor %}
+    {% elif pg %}
+    {% for j in pg %}
+    {% include 'partials/_card1.html' %}
+  
+    {% endfor %}
+    {% else %}
+    <p class="d-block font-weight-light my-2 heading">No search results!</p>
+    {% endif %}
+    </div>
+
+    <!-- Main Section ends-->
+{% endblock content %}
+
+{% block footer %}
+<footer class="mt-4 p-2" style="background-color: #4e71ba !important;margin-top:16.8% !important;font-family:cursive">
+  <p class="text-center p-1 m-0">Copyright © <script>document.write(new Date().getFullYear())</script> by TailBook  </p>
+
+</footer> 
+{% endblock footer %}

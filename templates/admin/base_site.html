@@ -1,0 +1,11 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block branding %}
+<h1 id="head" style="font-family: candara;font-size:28px;color:white">
+<b>TailBooks Admin</b>
+</h1>
+{% endblock branding %}
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %}

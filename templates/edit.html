@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}
+Edit {{request.user.username}}
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h2 class="heading font-weight-light text-center">Edit Profile</h2>
+    
+    <hr>
+</div>
+<div class="container w-25 card p-4 mt-4">
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit" class="w-100 text-white text-center my-2 btn btn-info">
+    </form>
+</div>
+
+<!-- <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">X</button>
+    <h1>Edit Profile</h1>
+  </div>
+  <div class="modal-body">
+    <div class="panel panel-default">
+      <div class="panel-heading text-center">
+        User - {{request.user}}
+      </div>
+      <div class="panel-body">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit" class="w-100 text-white text-center my-2 btn btn-info">
+            </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="panel-footer">
+        <input type="button" value="Save" id="empbutton" />
+        <div class="col-xs-10" id="lblstatus"></div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% load static %} 
+<!-- Card for details -->
+<div class="card1 my-2 mx-2 bk-card" >
+  <img 
+    src="{% if pgg.images %}
+        {{ pgg.images.url }}
+        {% else %}
+        {% static 'images/boy.png' %}
+        {% endif %}"
+    class="img-fluid" style="width:400px;"
+  />
+  <div class="card-header" style="background-color: #32CD32;text-align: center;">
+    <a href="#" class="text-white header-link"
+      > {{ pgg.names }}</a
+    >
+  </div>
+</div>
+<!-- Card for details ends -->
+
